@@ -1,0 +1,94 @@
+/*
+* Default Elements
+*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,span{
+    text-align: center;
+    line-height:1.25;
+}
+
+p{
+    line-height:1.5;
+    font-size: 16px;
+    text-align: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+/*
+*Navigation
+*/
+
+.personal_logo{
+    font-size: 30px;
+    font-weight: bold;
+    margin:0 12px;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link_Anchor{
+    margin:0 12px;
+    color: black;
+    text-decoration: none;
+}
+
+.navObjects{
+    display: flex;
+}
+
+.nav-link_Anchor--primary{
+    background-color: Black;
+    padding:8px 20px;
+    border-radius: 50px;
+    color:white;
+}
+
+.nav-link_Anchor--primary:hover{
+    background-color: purple;
+}
+
+/*
+*Introduction
+*/
+
+#introduction{
+    display: grid;
+    place-items: center;
+    min-height: 40vh;
+    flex-direction: column;
+}
+
+.intro_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about_me--info{
+    font-size: 15px;
+    margin-bottom: 28px;
+    margin-top: 28px;
+}
+
+.info_title{
+    margin-bottom:5px;
+}
