@@ -25,21 +25,31 @@ li{
 /*
 *Navigation
 */
-
+#navigation{
+    border-bottom: solid 2px black;
+}
 .personal_logo{
     font-size: 30px;
     font-weight: bold;
     margin:0 12px;
 }
 
-nav{
-    height: 100px;
+.navBar{
+    height: 75px;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:cornsilk;
 }
 
 .nav-link_Anchor{
@@ -70,8 +80,13 @@ nav{
 #introduction{
     display: grid;
     place-items: center;
-    min-height: 40vh;
+    min-height: 80vh;
     flex-direction: column;
+    background: url(../Assets/Images/pikachu.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .intro_container{
@@ -89,6 +104,13 @@ nav{
     margin-top: 28px;
 }
 
-.info_title{
-    margin-bottom:5px;
+.color--white{
+    color:white
+}
+
+#Languages{
+    display: grid;
+    place-items: center;
+    min-height: 60vh;
+    flex-direction:column;
 }
