@@ -287,6 +287,11 @@ li{
     width: 100%;
 }
 
+.assembler_program{
+    margin-bottom: 5vh;
+    width: 100%;
+}
+
 .project_image--wrapper{
     display: inline-block;
     overflow: hidden;
