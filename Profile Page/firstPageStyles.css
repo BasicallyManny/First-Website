@@ -235,6 +235,8 @@ li{
     position: relative;
     overflow:hidden;
     min-width: 600px;
+    z-index: 2;
+    max-height: 325px;
 }
 
 .project_list--title{
@@ -242,6 +244,7 @@ li{
     place-items:center;
     min-width: 200px;
     width: 100%;
+    margin-right: 10px;
 }
 
 .project_list--description{
@@ -249,23 +252,35 @@ li{
     min-height: 300px;
 }
 
-.project_list--description:before{
+
+.project_list--wrapper:before{
     content:"";
     position: absolute;
-    top:0;
+    top:0;  
     left:0;
     width: 100%;
     height:100%;
-    background-color: black;
     opacity: 0;
     transition: opacity 450ms ease;
+    background-color:#1c1d25;
     z-index: 2;
 }
 
 .project_list--wrapper:hover .project_image{
     transform: scale(1.07);
     filter:blur(5px);
+    opacity:0.45;
+    z-index: 3;
 }
+
+.project_list--wrapper:hover .project_description{
+    opacity:1;
+}
+
+.project_list--wrapper:hover .project_image{
+    opacity:0;
+}
+
 
 .project_name{
     width: 100%;
@@ -297,4 +312,33 @@ li{
     overflow: hidden;
 }
 
+.assembler_img{
+    min-width: 100vh;
+    transform:scale(.811);
+}
 
+.assembler_title{
+    max-width: 50vh;
+}
+
+.project_description{
+    display: grid;
+    place-items: center;
+    justify-content: flex-end;
+    transform:translateY(-175%);
+    opacity:0;
+    transition: transform 450ms ease opacity 300ms ease;
+}
+
+.project_description--para{
+    margin: 16px 0;
+}
+
+.project_description--description--link{
+    font-size: 20px;
+    margin-right: 16px;
+    text-decoration: none;
+    overflow:hidden;
+}
+
+ 
