@@ -44,6 +44,7 @@ ul{
     font-size: 30px;
     font-weight: bold;
     margin:0 12px;
+    color:whitesmoke;
 }
 
 .navBar{
@@ -60,8 +61,8 @@ ul{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:cornsilk;
-    z-index:4;
+    background-color: #201f21;
+    z-index:10;
 }
 
 .nav-link_Anchor{
@@ -72,17 +73,18 @@ ul{
 
 .navObjects{
     display: flex;
+    color:whitesmoke;
 }
 
 .nav-link_Anchor--primary{
-    background-color: Black;
+    background-color: whitesmoke;
     padding:8px 20px;
     border-radius: 50px;
-    color:white;
+    color:whitesmoke;
 }
 
 .nav-link_Anchor--primary:hover{
-    background-color: purple;
+    background-color: #DF00FF;
 }
 
 /*
@@ -117,14 +119,19 @@ ul{
 }
 
 .color--white{
-    color:white
+    color:whitesmoke
 }
 
-#Languages{
-    display: grid;
-    place-items: center;
-    min-height: 60vh;
-    flex-direction:column;
+.color--purple{
+    color: #DF00FF;
+}
+
+.color--darkGray{
+    color:#201f21;
+}
+
+.background--dark{
+    background-color:#201f21;
 }
 
 .info_title{
@@ -141,11 +148,12 @@ ul{
 * Languages
 */
 
-#languages{
-    display: flex;
-    align-items: center;
+#Languages{
+    display: grid;
+    place-items: center;
     min-height: 30vh;
-    flex-direction:column;
+    max-height: 50px;
+    background-color: #201f21;
 }
 
 .title_container{
@@ -155,12 +163,13 @@ ul{
     min-height: 50px;
     align-items: center;
 }
+
 .title{
     text-align: center;
     text-decoration: underline;
     font-size: 36px;
     margin-right: 3vh; 
-    margin-top: 10vh;
+    margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
@@ -214,7 +223,7 @@ ul{
 */
 #Projects{
     display: column;
-    align-items: center;
+    min-height: 1295px;
 }
 
 .project--info{
@@ -222,16 +231,21 @@ ul{
     align-items: center;
     flex-direction: column;
     max-width: 500px;
+    height: 100%;
     margin: 0 auto;
     font-size: 20px;
     margin-bottom: 28px;
     margin-top: 28px;
     font-weight: normal;
 }
+.project_background--hover{
+    z-index: 1;
+}
 
 .project_wrapper{
-    margin-top: 5vh;
     width: 100%;
+    height: 100%;
+    margin-top: 55px;
 }
 .project_list--wrapper{
     display: flex;
@@ -243,11 +257,15 @@ ul{
     min-width: 600px;
     z-index: 2;
     max-height: 325px;
+    background-color:whitesmoke;
+    z-index: 4;
 }
 
 .project_list--title{
     display: flex;
-    place-items:center;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
     min-width: 200px;
     width: 100%;
     margin-right: 10px;
@@ -285,6 +303,10 @@ ul{
     opacity:0.6;
 }
 
+.project_description--links{
+    margin-top: 10px;
+}
+
 
 .project_name{  
     width: 100%;
@@ -318,9 +340,8 @@ ul{
 }
 
 .assembler_img{
-    min-width: 100vh;
-    transform:scale(.811);
-    z-index: 1;
+    transform: scale(1.5);
+    width:100%;
 }
 
 .assembler_title{
@@ -328,9 +349,9 @@ ul{
 }
 
 .project_description{
-    display: grid;
+    display:grid;
     place-items: center;
-    justify-content: flex-end;
+    height: 45%;
     transform:translateY(-175%);
     opacity:0;
     transition: transform 450ms ease opacity 300ms ease;
@@ -355,7 +376,7 @@ ul{
 #socials{
     display: flex;
     justify-content: center;
-    min-height: 30vh;
+    min-height: 30px;
     margin-top: 10vh;
 }
 
@@ -393,9 +414,15 @@ footer{
     color: #DF00FF;
 }
 
+.icon_elements{
+    display: flex;
+    justify-content:center;
+    align-items: space-between;
+}
 .social_icons li a{
     color:#fff;
     font-size:30px;
+    margin-right: 10px;
 }
 
 /*
