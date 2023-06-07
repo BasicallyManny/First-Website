@@ -28,10 +28,43 @@ ul{
     padding:0;
 }
 
+a{
+    text-decoration: none;
+    position: relative;
+}
+
 .row{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 12px;
+}
+
+.link_hover-effect:after{
+    content:""; 
+    position: absolute;
+    height: 3px;
+    background-color:whitesmoke;
+    width:0;
+    bottom:-3px;
+    right:0;
+}
+
+.link_hover-effect:hover::after{
+    width: 100%;
+    left: 0;
+    transition: all 300ms ease;
+}
+
+.icon_hover-effect:hover{
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform:scale(0.9);
+}
+
+.icon_hover-effect{
+    width: 100%;
+    transition: all 300ms ease;
 }
 
 /*
@@ -55,6 +88,7 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12px;
 }
 
 .sticky {
@@ -85,6 +119,9 @@ ul{
 
 .nav-link_Anchor--primary:hover{
     background-color: #DF00FF;
+    width:0;
+    bottom:-3px;
+    text-decoration: solid;
 }
 
 /*
@@ -187,6 +224,7 @@ ul{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .language_image{
@@ -266,7 +304,7 @@ ul{
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    min-width: 200px;
+    min-width: 270px;
     width: 100%;
     margin-right: 10px;
 }
@@ -340,8 +378,9 @@ ul{
 }
 
 .assembler_img{
-    transform: scale(1.5);
     width:100%;
+    transform: scale(1.25);
+    float: right 50vh;
 }
 
 .assembler_title{
@@ -440,6 +479,59 @@ footer{
     .footer_item{
         flex: 0 0 50%;
         max-width: 50%;
+    }
+}
+
+/*
+*Responsive design for mobile devices
+*/
+@media (max-width: 768px) {
+    navBar{
+        height:68px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .about_me--info{
+       font-size: 18px;       
+    }
+
+    .language{
+        width: calc(100%/3);
+    }
+
+    .language_list{
+        padding-bottom: 10px;
+    }
+
+    .title_wrapper{
+        bottom: 10vh;
+    }
+
+    .project_description--para{
+        font-size:14px;
+    }
+
+    .project_description{
+        padding-right: 30px;
+        left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav_link:not(:last-child){ 
+        display: none;
+    }
+
+    .project_description--para{
+        display: none;
+    }
+
+    .project_description--links{
+        display: flex;
+        justify-content: center;
     }
 }
 
